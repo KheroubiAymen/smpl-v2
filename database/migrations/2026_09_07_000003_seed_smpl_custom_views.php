@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
@@ -63,6 +64,9 @@ return new class extends Migration
                 Log::info("[SMPL] Created custom view: {$def['name']} ({$def['entitytype']})");
             });
         }
+
+        Artisan::call('cache:clear');
+        Log::info('[SMPL] Cache cleared after migration');
     }
 
     public function down(): void
