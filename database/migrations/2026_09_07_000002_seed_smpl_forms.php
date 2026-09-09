@@ -343,6 +343,83 @@ return new class extends Migration
                 ],
             ],
 
+            // ── Subject Template ──────────────────────────────────────────────
+            [
+                'name'                  => 'smpl_subject_template',
+                'label_position'        => 'outlined',
+                'label_size'            => '1/4',
+                'with_default_language' => true,
+                'can_add_queries'       => false,
+                'entitytype'            => 'SMPL_SUBJECT',
+                'contents' => [
+                    $f('smpl_id',         1, 1, 6, 4, $this->noVal()),
+                    $f('smpl_subject_id', 1, 7, 6, 4, $this->noVal()),
+                ],
+            ],
+
+            // ── Case Template ─────────────────────────────────────────────────
+            [
+                'name'                  => 'smpl_case_template',
+                'label_position'        => 'outlined',
+                'label_size'            => '1/4',
+                'with_default_language' => true,
+                'can_add_queries'       => false,
+                'entitytype'            => 'SMPL_CASE',
+                'contents' => [
+                    $f('smpl_id',           1, 1, 6, 4, $this->noVal()),
+                    $f('smpl_case_id',      1, 7, 6, 4, $this->noVal()),
+                    $f('smpl_case_type_fk', 5, 1, 6, 4, $this->noVal()),
+                    $f('smpl_subject_fk',   5, 7, 6, 4, $this->noVal()),
+                ],
+            ],
+
+            // ── Kit Template ──────────────────────────────────────────────────
+            [
+                'name'                  => 'smpl_kit_template',
+                'label_position'        => 'outlined',
+                'label_size'            => '1/4',
+                'with_default_language' => true,
+                'can_add_queries'       => false,
+                'entitytype'            => 'SMPL_KIT',
+                'contents' => [
+                    $f('smpl_id',            1, 1, 6, 4, $this->noVal()),
+                    $f('smpl_kit_id',        1, 7, 6, 4, $this->noVal()),
+                    $f('smpl_study_fk',      5, 1, 6, 4, $this->noVal()),
+                    $f('smpl_kit_status_fk', 5, 7, 6, 4, $this->noVal()),
+                    $f('smpl_subject_fk',    9, 1, 6, 4, $this->noVal()),
+                    $f('smpl_case_fk',       9, 7, 6, 4, $this->noVal()),
+                    $f('smpl_kit_is_real',  13, 1, 6, 3, $this->noVal()),
+                ],
+            ],
+
+            // ── Generic Event Template - Morphological ────────────────────────
+            [
+                'name'                  => 'Generic_event_template_morphological',
+                'label_position'        => 'outlined',
+                'label_size'            => '1/4',
+                'with_default_language' => true,
+                'can_add_queries'       => false,
+                'entitytype'            => 'SMPL_MORPHOLOGICAL_CODE',
+                'contents' => [
+                    $f('smpl_label',       1, 1, 6, 4, $this->req()),
+                    $f('smpl_description', 1, 7, 6, 9, $this->noVal()),
+                ],
+            ],
+
+            // ── Generic Event Template - Topographical ────────────────────────
+            [
+                'name'                  => 'Generic_event_template_topographical',
+                'label_position'        => 'outlined',
+                'label_size'            => '1/4',
+                'with_default_language' => true,
+                'can_add_queries'       => false,
+                'entitytype'            => 'SMPL_TOPOGRAPHICAL_CODE',
+                'contents' => [
+                    $f('smpl_label',       1, 1, 6, 4, $this->req()),
+                    $f('smpl_description', 1, 7, 6, 9, $this->noVal()),
+                ],
+            ],
+
             // ── Workflow Step Edit ────────────────────────────────────────────
             [
                 'name'                  => 'smpl_workflow_step_edit',

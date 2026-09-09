@@ -186,8 +186,16 @@ class SmplSchemaSeeder
             ['name' => 'SMPL_SAMPLE',         'label' => 'Sample',        'context' => 1],
             ['name' => 'SMPL_EVENT',          'label' => 'Event',         'context' => 1],
             ['name' => 'SMPL_CREATION',       'label' => 'Creation',      'context' => 1],
-            ['name' => 'SMPL_SAMPLE_TYPE',    'label' => 'Sample Type',   'context' => 1],
-            ['name' => 'SMPL_CONTAINER_TYPE', 'label' => 'Container Type','context' => 1],
+            ['name' => 'SMPL_SAMPLE_TYPE',                    'label' => 'Sample Type',              'context' => 1],
+            ['name' => 'SMPL_CONTAINER_TYPE',                  'label' => 'Container Type',            'context' => 1],
+            ['name' => 'SMPL_REQUEST',                         'label' => 'Request',                   'context' => 1],
+            ['name' => 'TIMEPOINT_UND',                        'label' => 'Timepoint',                 'context' => 1],
+            ['name' => 'SMPL_MORPHOLOGICAL_CODE',              'label' => 'Morphological Code',        'context' => 1],
+            ['name' => 'SMPL_TOPOGRAPHICAL_CODE',              'label' => 'Topographical Code',        'context' => 1],
+            ['name' => 'SMPL_STRAIN_RESISTANCE_ANTIMICROBIALS','label' => 'Strain Resistance',         'context' => 1],
+            ['name' => 'SMPL_COUNTRY',                         'label' => 'Country',                   'context' => 1],
+            ['name' => 'SMPL_COLLECTION',                      'label' => 'Collection',                'context' => 1],
+            ['name' => 'SMPL_DERIVATION',                      'label' => 'Derivation',                'context' => 1],
         ];
     }
 
@@ -434,6 +442,20 @@ class SmplSchemaSeeder
             ['SMPL_CONTAINER_TYPE', 'smpl_container_type'],
             ['SMPL_CONTAINER_TYPE', 'smpl_container_volume'],
             ['SMPL_CONTAINER_TYPE', 'smpl_container_additive'],
+
+            ['SMPL_REQUEST',                          'smpl_label'],
+            ['SMPL_REQUEST',                          'smpl_description'],
+            ['TIMEPOINT_UND',                         'smpl_label'],
+            ['TIMEPOINT_UND',                         'smpl_description'],
+            ['SMPL_MORPHOLOGICAL_CODE',               'smpl_label'],
+            ['SMPL_MORPHOLOGICAL_CODE',               'smpl_description'],
+            ['SMPL_TOPOGRAPHICAL_CODE',               'smpl_label'],
+            ['SMPL_TOPOGRAPHICAL_CODE',               'smpl_description'],
+            ['SMPL_STRAIN_RESISTANCE_ANTIMICROBIALS', 'smpl_label'],
+            ['SMPL_STRAIN_RESISTANCE_ANTIMICROBIALS', 'smpl_description'],
+            ['SMPL_COUNTRY',                          'smpl_label'],
+            ['SMPL_COLLECTION',                       'smpl_label'],
+            ['SMPL_DERIVATION',                       'smpl_label'],
         ];
     }
 
